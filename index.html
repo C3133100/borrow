@@ -21,32 +21,51 @@
      <iframe name="returnWin" style="display: none;" onload="this.onload=function(){window.location='ok1.html'}"></iframe>
         
         <!--表單問題中的傳送碼-->
-        <form target='returnWin' role="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSczxudcpPQeE3gMFeZ7Sg42VckHkMVs3PLNEsf-6lbe3wiuqw/formResponse" method="post" id="myForm">
+        <form target='returnWin' role=form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeH6gaVs1dZFI_7GgO9ON4fBn__Js-DwByTtuq24i4iroBYcw/formResponse" method="post" id="myForm">
             <div class="row">  
             <!--姓名--> 
               <div class="col-sm-6">
                     <div class="form-group">
                         <label><span class="title">姓名</span><span class="text-primary">*(請填您的姓名)</span></label>
-                        <input type="text" class="form-control" name="entry.1288374579" id="1288374579" maxlength="6" />
+                        <input type="text" class="form-control" name="entry.1558065698" id="1558065698" maxlength="6" />
                     </div>
                 </div>
              <!--電話--> 
+
+             <div class="col-sm-6">
+                <div class="form-group">
+                    <label><span class="title">電話</span><span class="text-primary">*(請填連絡電話)</span></label>
+                    <input type="tel" class="form-control" name="entry.1450636920" id="1450636920" placeholder ="格式０９ＸＸＸＸＸＸＸＸ"  minlength="7" maxlength="14">
+                </div>
+            </div>       
+
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label><span class="title">小組</span><span class="text-primary">*</span></label>
-                        <select name= "entry.673247483" id="673247483" value="" class="form-control" size="1">
+                        <select name= "entry.554751462" id="554751462" value="" class="form-control" size="1">
                             <option value = "長青小組">長青小組</option>
                             <option value = "良善小組">良善小組</option>
                             <option value = "美女小組">美女小組</option>
                             <option value = "牛棚小組">牛棚小組</option>
-                        </select>                    </div>
+                            <option value = "保羅小組">保羅小組</option>
+                            <option value = "佳美小組">佳美小組</option>
+                            <option value = "約書亞小組">約書亞小組</option>
+                            <option value = "以勒小組">以勒小組</option>
+                            <option value = "盛愛小組">盛愛小組</option>
+                            <option value = "帝寶小組">帝寶小組</option>
+                            <option value = "得勝小組">得勝小組</option>
+                            <option value = "百合小組">百合小組</option>
+                            <option value = "喜樂小組">喜樂小組</option>
+                        </select>                    
+                    </div>
                 </div>
             </div>
             <!--現居地--> 
             <div class="col-sm-6">
                 <div class="form-group">
                     <label><span class="title">要借鑰匙或教室</span><span class="text-primary">*</span></label>
-                    <select name="entry.1587854474" id="1587854474"value="" class="form-control" size="1">
+                    <img src="img/key.jpg"><img src="img/room.jpg">
+                    <select name="entry.2059759142" id="2059759142"value="" class="form-control" size="1">
                         <option value = "鑰匙">鑰匙</option> 
                         <option value = "教室">教室</option> 
                     </select>
@@ -56,10 +75,18 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label><span class="title">如借教室, 哪一間?</span><span class="text-danger">*</span></label>
-                        <select name="entry.353107077" id="353107077" value="" class="form-control" size="1">              
+                        <select name="entry.1062176347" id="1062176347" value="" class="form-control" size="1">              
                             <option value = "大教室">大教室</option>
                             <option value = "大教室">小教室</option>
-                            <option value = "副堂">副堂</option>                           
+                            <option value = "副堂">副堂</option>
+                            <option value = "四樓馬可教室">四樓馬可教室</option> 
+                            <option value = "四樓使徒教室">四樓使徒教室</option>
+                            <option value = "親子室">親子室</option> 
+                            <option value = "咖啡廳">咖啡廳</option> 
+                            <option value = "一樓教室外">一樓教室外</option> 
+                            <option value = "一樓教室內">一樓教室內</option> 
+                            <option value = "點心室">點心室</option> 
+                            <option value = "大堂">大堂</option> 
                         </select>
                     </div>
                 </div>
@@ -68,12 +95,7 @@
                 
             
             
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label><span class="title">電話</span><span class="text-primary">*(請填連絡電話)</span></label>
-                        <input type="tel" class="form-control" name="entry.1512164386" id="1512164386" placeholder ="格式０９ＸＸＸＸＸＸＸＸ"  minlength="7" maxlength="14">
-                    </div>
-                </div>           
+                   
           
                
 
@@ -115,7 +137,7 @@
                         required:true,
                         
                   
-                    },  'entry.1512164386':{
+                    },  'entry.1062176347':{
                         required:true,
                         
                     
@@ -136,7 +158,7 @@
         },
           
           
-          'entry.1512164386' : {
+          'entry.1062176347' : {
             required: "必填"
                     }
                 }
