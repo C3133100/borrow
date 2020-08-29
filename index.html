@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="main.css" type="text/CSS" rel="stylesheet" />
+    <title>借用鑰匙或教室登記表</title>
+    
+  </head>
+  <body>
+      <!--表單標題開始-->
+    <h1 class="text-center mt-5">借用鑰匙或教室登記表</h1>
+    <h5 class="text-center" style=color:yellow;>要借用鑰匙或教室者, 請在此表單作登記.  謝謝您的配合. </h5>
+    <div class="container mt-5">
+    
+     <!-- 表單返回頁，記得在表單加「 target='returnWin' 」 -->
+     <iframe name="returnWin" style="display: none;" onload="this.onload=function(){window.location='ok1.html'}"></iframe>
+        
+        <!--表單問題中的傳送碼-->
+        <form target='returnWin' role="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSczxudcpPQeE3gMFeZ7Sg42VckHkMVs3PLNEsf-6lbe3wiuqw/formResponse" method="post" id="myForm">
+            <div class="row">  
+            <!--姓名--> 
+              <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><span class="title">姓名</span><span class="text-primary">*(請填您的姓名)</span></label>
+                        <input type="text" class="form-control" name="entry.1288374579" id="1288374579" maxlength="6" />
+                    </div>
+                </div>
+             <!--電話--> 
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><span class="title">小組</span><span class="text-primary">*</span></label>
+                        <select name= "entry.673247483" id="673247483" value="" class="form-control" size="1">
+                            <option value = "長青小組">長青小組</option>
+                            <option value = "良善小組">良善小組</option>
+                            <option value = "美女小組">美女小組</option>
+                            <option value = "牛棚小組">牛棚小組</option>
+                        </select>                    </div>
+                </div>
+            </div>
+            <!--現居地--> 
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label><span class="title">要借鑰匙或教室</span><span class="text-primary">*</span></label>
+                    <select name="entry.1587854474" id="1587854474"value="" class="form-control" size="1">
+                        <option value = "鑰匙">鑰匙</option> 
+                        <option value = "教室">教室</option> 
+                    </select>
+                </div>
+            </div>  
+                    
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><span class="title">如借教室, 哪一間?</span><span class="text-danger">*</span></label>
+                        <select name="entry.353107077" id="353107077" value="" class="form-control" size="1">              
+                            <option value = "大教室">大教室</option>
+                            <option value = "大教室">小教室</option>
+                            <option value = "副堂">副堂</option>                           
+                        </select>
+                    </div>
+                </div>
+
+                 <!--是否有感冒-->              
+                
+            
+            
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><span class="title">電話</span><span class="text-primary">*(請填連絡電話)</span></label>
+                        <input type="tel" class="form-control" name="entry.1512164386" id="1512164386" placeholder ="格式０９ＸＸＸＸＸＸＸＸ"  minlength="7" maxlength="14">
+                    </div>
+                </div>           
+          
+               
+
+
+            
+            <div class="text-center pb-3">
+                <button type="submit" class="btn btn-primary">送出</button>
+              
+            </div>
+
+        </form>
+    </div>
+
+    <!--表單標題結束-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    <!-- 表單驗證 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+  
+    <script>
+        $(function(){
+            $("#myForm").validate({
+                submitHandler: function(form){
+                    form.submit();
+                },
+                rules: {
+                    'entry.1288374579' : {
+                        required: true
+                     },
+                     'entry.673247483':{
+                        required:true,
+                        
+                    },'entry.1587854474' :{
+                        required:true,
+                        
+                  
+                    },  'entry.1512164386':{
+                        required:true,
+                        
+                    
+
+                    }
+                },  
+                     
+                
+                messages: {
+                    'entry.1288374579' : {
+            required: "必填"
+          },
+          'entry.673247483' : {
+            required: "必填"
+          },
+          'entry.1587854474' : {
+            required: "必填"
+        },
+          
+          
+          'entry.1512164386' : {
+            required: "必填"
+                    }
+                }
+            });
+
+        });
+
+    </script>
+    </body>
+</html>
